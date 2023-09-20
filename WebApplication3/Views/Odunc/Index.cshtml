@@ -1,0 +1,30 @@
+﻿@using WebApplication3.Models.Entity
+@model List<ÖDÜNÇ>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Ödünç Kitaplar Sayfası</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Kitabın Adı</th>
+        <th>Üyenin Adı</th>
+        <th>Üyenin Soyadı</th>
+        <th>Üyenin Telefon Numarası</th>
+        <th>iade Tarihi</th>
+    </tr>
+    @foreach (var odunc in Model)
+    {
+<tr>
+    <td>@odunc.Kitap.AD</td>
+    <td>@odunc.Üye1.AD</td>
+    <td>@odunc.Üye1.SOYAD</td>
+    <td>@odunc.Üye1.TELEFON</td>
+    <td>@odunc.TARİH</td>
+
+</tr>
+
+    }
+
+</table>

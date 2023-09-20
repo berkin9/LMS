@@ -1,0 +1,17 @@
+﻿@model WebApplication3.Models.Entity.Yazar
+
+@{
+    ViewBag.Title = "YazarEkle";
+}
+
+<form class="form-group" method="post">
+    <div></div>
+    <div style="margin-top:15px">
+        <label>Yazar Adı</label>
+        @Html.TextBoxFor(author => author.AD, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info">Yazar Ekle</button>
+    </div>
+
+</form>

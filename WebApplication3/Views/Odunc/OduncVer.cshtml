@@ -1,0 +1,32 @@
+﻿@model WebApplication3.Models.Entity.ÖDÜNÇ
+@{
+    ViewBag.Title = "OduncVer";}
+
+<h2>Ödünç Verme İşlemi</h2>
+<form class="form-group" method="post">
+
+    <div style="margin-top:15px">
+        <label>Üyeler</label>
+        @*Html.TextBoxFor(k => k.ÜYE, new { @class = "form-control", @maxlength = "9" })*@
+        @Html.DropDownListFor(k => k.Üye1.ID, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+
+    </div>
+    <div style="margin-top:15px">
+        <label>Kitaplar</label>
+        @*Html.TextBoxFor(k => k.KİTAP, new { @class = "form-control", @maxlength = "9" })*@
+        @*Html.DropDownListFor(k => k.Kitap.ID, (List<SelectListItem>)ViewBag.dgr2, new { @class = "form-control" })*@
+        @Html.DropDownListFor(m => m.Kitap.ID, (List<SelectListItem>)ViewBag.dgr2, new{@class = "form-control"})
+
+
+    </div>
+    <div style="margin-top:15px">
+        <label>Kitap İade Tarihi</label>
+        <input type="text" class="form-control" name="TARİH" value="@DateTime.Now.AddDays(14).ToShortDateString()" />
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-group" style="background-color:#4800ff; color:white">Kitabı Ödünç Al</button>
+        <input type="hidden" value="False" name="ISLEMDURUM" />
+    </div>
+
+</form>
+

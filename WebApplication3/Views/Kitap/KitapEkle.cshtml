@@ -1,0 +1,36 @@
+﻿@model WebApplication3.Models.Entity.Kitap
+
+
+@{
+    ViewBag.Title = "KitapEkle";
+}
+
+
+<form class="form-group" method="post">
+    <div></div>
+    <div style="margin-top:15px">
+        <label>Kitap Adı</label>
+        @Html.TextBoxFor(book => book.AD, new { @class = "form-control" })
+    </div>
+
+    <div style="margin-top:15px">
+        <label>Kitap Yazarı</label>
+        @Html.DropDownListFor(book => book.Yazar1.ID, (List<SelectListItem>)ViewBag.value2, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Basım Yılı</label>
+        @Html.TextBoxFor(book => book.YIL, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Yayınevi</label>
+        @Html.TextBoxFor(book => book.YAYINEVİ, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Resim</label>
+        @Html.TextBoxFor(book => book.RESİM, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info">Kitap Ekle</button>
+    </div>
+
+</form>

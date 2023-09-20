@@ -1,0 +1,23 @@
+﻿@using WebApplication3.Models.Entity
+@model List<Yazar>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Yazarlar</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Ad</th>
+    </tr>
+    @foreach (var author in Model)
+    {
+        <tr>
+            <td>@author.ID</td>
+            <td>@author.AD</td>
+
+        </tr>
+    }
+</table>
+<a class="btn btn-primary" href="/Yazar/YazarEkle/">Yeni Yazar Ekle</a>

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DBLibraryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DBLibraryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Kitap">
           <Key>
             <PropertyRef Name="ID" />
@@ -14,8 +14,8 @@
           <Property Name="YAZAR" Type="int" />
           <Property Name="YIL" Type="char" MaxLength="4" />
           <Property Name="YAYINEVİ" Type="varchar" MaxLength="50" />
-          <Property Name="RESİM" Type="varchar" MaxLength="250" />
           <Property Name="DURUM" Type="bit" />
+          <Property Name="RESİM" Type="varchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="ÖDÜNÇ">
           <Key>
@@ -107,8 +107,7 @@
             <End Role="ÖDÜNÇ" EntitySet="ÖDÜNÇ" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DBLibraryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">

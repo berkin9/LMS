@@ -1,0 +1,26 @@
+﻿@model WebApplication3.Models.Entity.Üye
+
+@{
+    ViewBag.Title = "UyeEkle";
+}
+
+<form class="form-group" method="post">
+    <div></div>
+    <div style="margin-top:15px">
+        <label>Üyenin Adı</label>
+        @Html.TextBoxFor(uye => uye.AD, new { @class = "form-control" })
+    </div>
+
+    <div style="margin-top:15px">
+        <label>Üyenin Soyadı</label>
+        @Html.TextBoxFor(uye => uye.SOYAD, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Üyenin Telefon Numarası</label>
+        @Html.TextBoxFor(uye => uye.TELEFON, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info">Üye Ekle</button>
+    </div>
+
+</form>
